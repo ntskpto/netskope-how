@@ -16,7 +16,7 @@ apply: all
 destroy: all
 	@read -p "Enter Workspace Name: " workspace; \
 	terraform workspace select $$workspace \
-	&& terraform destroy -auto-approve -var 'student_instance_count=15'
+	&& terraform destroy -auto-approve -var 'student_instance_count=15' 
 
 apply_ubuntu:
 	@read -p "Enter Workspace Name: " workspace; \

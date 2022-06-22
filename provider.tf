@@ -1,8 +1,8 @@
 provider "aws" {
-  access_key = "${var.AWS_ACCESS_KEY}" 
-  secret_key = "${var.AWS_SECRET_KEY}"
-  region = "${var.AWS_REGION}"
-  profile = "${var.AWS_PROFILE}"
+  access_key = "${var.aws_access_key}" 
+  secret_key = "${var.aws_secret_key}"
+  region = "${var.aws_region}"
+  # profile = "${var.AWS_PROFILE}"
   
   # assume_role = {
   #   role_arn = "${var.workspace_iam_roles[terraform.workspace]}"
