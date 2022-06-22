@@ -48,8 +48,8 @@ locals {
       student_security_group_name   = "student-SG-georg"
       guacamole_security_group_name = "guacamole-SG-georg"
       master_security_group_name    = "master-SG-georg"
-      route_table1_name             = "route-table-phil"
-      igw_name                      = "igw-phil"
+      route_table1_name             = "route-table-georg"
+      igw_name                      = "igw-georg"
       namespace                     = "gh"
     }
     rainer = {
@@ -74,9 +74,9 @@ locals {
       vpc_cidr                = ["10.4.0.0/16"]
       subnet1_cidr            = ["10.4.1.0/24"]
       subnet2_cidr            = ["10.4.2.0/24"]
-      vpc_name                = "vpc-marcus-csw"
-      subnet1_name            = "Subnet1-marcus"
-      subnet2_name            = "Subnet2-marcus"
+      vpc_name                = "vpc-eugen-csw"
+      subnet1_name            = "Subnet1-eugen"
+      subnet2_name            = "Subnet2-eugen"
       publisher_security_group_name = "publisher-SG-eugen"
       webserver_security_group_name = "webserver-SG-eugen"
       student_security_group_name   = "student-SG-eugen"
@@ -85,6 +85,23 @@ locals {
       route_table1_name             = "route-table-eugen"
       igw_name                      = "igw-eugen"
       namespace                     = "en"
+    }
+        patrick = {
+      name                    = "patrick"
+      vpc_cidr                = ["10.5.0.0/16"]
+      subnet1_cidr            = ["10.5.1.0/24"]
+      subnet2_cidr            = ["10.5.2.0/24"]
+      vpc_name                = "vpc-patrick-csw"
+      subnet1_name            = "Subnet1-patrick"
+      subnet2_name            = "Subnet2-patrick"
+      publisher_security_group_name = "publisher-SG-patrick"
+      webserver_security_group_name = "webserver-SG-patrick"
+      student_security_group_name   = "student-SG-patrick"
+      guacamole_security_group_name = "guacamole-SG-patrick"
+      master_security_group_name    = "master-SG-patrick"
+      route_table1_name             = "route-table-patrick"
+      igw_name                      = "igw-patrick"
+      namespace                     = "pk"
     }
   }
   workspace = "${local.env[terraform.workspace]}"

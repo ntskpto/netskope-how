@@ -5,6 +5,8 @@ all:
 	@echo "rainer"
 	@echo "eugen"
 	@echo "georg"
+	@echo "patrick"
+
 
 
 apply: all

@@ -18,16 +18,14 @@ Windows - https://chocolatey.org/install
 
 **2. install packages:**
 
-  
+***awscli***
 
-awscli
-terraform 
-make
+***terraform*** 
 
+***make***
   
 **3. modify aws credentials file**
    
-
 Create (or edit) the ~/.aws/credentials file and insert the following AWS profile
 
     [csw-profile]
@@ -35,7 +33,12 @@ Create (or edit) the ~/.aws/credentials file and insert the following AWS profil
     aws_secret_access_key = <Secret  Key>
 
 
-**4. Prepare your vars.tf file with the corresponding AccessKeys/SecretKeys provided internally**
+**4. create a terraform.tfvars file with your aws credentials**
+
+AWS_ACCESS_KEY = "XXXX"
+AWS_SECRET_KEY = "XXXX"
+AWS_PROFILE     = "csw-profile"
+
    
 This terraform module creates Netskope Hands On Lab Environment with predefined custom student images that contain neccessary configuration parameters for the lab
 
@@ -49,7 +52,7 @@ terraform.state will be saved on remote S3 buckets with versioning, encryption e
 
   
 
-to start the environment
+**to start the environment**
 
   
 
@@ -59,14 +62,14 @@ to start the environment
 
 After running the command you will receive outputs of the created ressources containing the DNS names to access the ressources
 
-to destroy the environment
+**to destroy the environment**
 
   
 
     make destroy
 
   
-**estimated infrastructure monthly cost* with 2 student PCs* / 730 hours * 5 hours = 2,30 $ per Workshop
+**estimated infrastructure monthly cost* with 2 student PCs* 340 / 730 hours * 5 hours = **2,30 $ per Workshop**
 
 ```
 ➜  terraform_workspaces_netskope_csw git:(main) ✗ infracost breakdown --path plan.json
