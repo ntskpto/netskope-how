@@ -73,10 +73,10 @@ After running the command you will receive outputs of the created ressources con
 
 **Public DNS access:**
 
-- Publisher SSH: publisher.<workspace>.sselab.eu
-- Master Instructor RDP: master.<workspace>.sselab.eu
-- Guacamole HTTPS: guacamole.<workspace>.sselab.eu
-- Student RDP: studentXX.<workspace>.sselab.eu
+- Publisher SSH: publisher."ENV".sselab.eu
+- Master Instructor RDP: master."ENV".sselab.eu
+- Guacamole HTTPS: guacamole."ENV".sselab.eu
+- Student RDP: studentXX."ENV".sselab.eu
 
 
 **Environment**: 
