@@ -1,17 +1,12 @@
-variable "AWS_ACCESS_KEY" {
-    type = string
-    default = "AKIA4FWAMZRMDOXEOJVM"
-}
-variable "AWS_SECRET_KEY" {
-    type = string
-    default = "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"
-}
+variable "AWS_SECRET_KEY" {}
+
+variable "AWS_ACCESS_KEY" {}
+
 variable "AWS_REGION" {
     default = "eu-central-1"
 }
-variable "AWS_PROFILE" {
-    default = "csw-profile"
-}
+variable "AWS_PROFILE" {}
+
 ############################################################
 #             STUDENT USER PREFIX
 ############################################################
