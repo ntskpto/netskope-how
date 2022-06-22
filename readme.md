@@ -1,6 +1,6 @@
 ﻿<h2> Netskope Cloud Security Workshop automation through Terraform Workspaces </h2>
 
-  
+  IAM credentials and environmental access will be provided by the DACH netskope team / Phil Rumi
   
 These scripts contains custom AMIs
 **1. Install Packet Managers**
@@ -18,11 +18,9 @@ Windows - https://chocolatey.org/install
 
 **2. install packages:**
 
-***awscli***
-
-***terraform*** 
-
-***make***
+- awscli
+- make
+- terraform
   
 **3. modify aws credentials file**
    
@@ -73,14 +71,12 @@ After running the command you will receive outputs of the created ressources con
 **estimated infrastructure monthly cost* with 2 student PCs* 340 / 730 hours * 5 hours = **2,30 $ per Workshop**
 
 
-Public DNS access:
+**Public DNS access:**
 
-Publisher: publisher.<workspace>.sselab.eu
-Master Instructor: master.<workspace>.sselab.eu
-guacamole.<workspace>.sselab.eu
-
-RDP for student machines:
-studentXX.<workspace>.sselab.eu
+- Publisher SSH: publisher.<workspace>.sselab.eu
+- Master Instructor RDP: master.<workspace>.sselab.eu
+- Guacamole HTTPS: guacamole.<workspace>.sselab.eu
+- Student RDP: studentXX.<workspace>.sselab.eu
 
 
 ```
