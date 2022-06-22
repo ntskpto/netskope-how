@@ -35,9 +35,11 @@ Create (or edit) the ~/.aws/credentials file and insert the following AWS profil
 
 **4. create a terraform.tfvars file with your aws credentials**
 
+```
 AWS_ACCESS_KEY = "XXXX"
 AWS_SECRET_KEY = "XXXX"
 AWS_PROFILE     = "csw-profile"
+```
 
    
 This terraform module creates Netskope Hands On Lab Environment with predefined custom student images that contain neccessary configuration parameters for the lab
