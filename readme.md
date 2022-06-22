@@ -51,11 +51,16 @@ terraform.state will be saved on remote S3 buckets with versioning, encryption e
 
   
 
-    make apply
+    make apply 
 
   
-
 After running the command you will receive outputs of the created ressources containing the DNS names to access the ressources
+
+```
+make apply_ubuntu
+```
+This will ask for the $token value you can pass on while creating this publisher
+
 
 **to destroy the environment**
 
@@ -63,7 +68,9 @@ After running the command you will receive outputs of the created ressources con
 
     make destroy
 
-  
+If you do want to create a NEW publisher and connect it to your tenant via TOKEN, you can run 
+
+
 **estimated infrastructure monthly cost* with 2 student PCs* 340 / 730 hours * 5 hours = **2,30 $ per Workshop**
 
 
