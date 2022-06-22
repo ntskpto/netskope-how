@@ -2,17 +2,13 @@
 
   IAM credentials and environmental access will be provided by the DACH netskope team / Phil Rumi
   
-
 **1. Install Packet Managers**
 
-  
 
 ```
-
 MacOS - Install HomeBrew via /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 Windows - https://chocolatey.org/install
-
 ```
 
 
