@@ -118,32 +118,32 @@ resource "aws_eip" "master_instance_eip" {
 ### New Ubuntu Publisher with Token Data -> SEE user_data.yaml
 ############################################################
 
-resource "aws_instance" "ubuntu_publisher_instance" {
-    count = var.ubuntu_publisher ? 1 : 0
-    ami = var.ubuntu_publisher_instance_ami
-    instance_type = var.ubuntu_publisher_instance_type
-    subnet_id = "${aws_subnet.subnet2.id}"
-    key_name = var.key_name
-    user_data = length(var.token) == 0 ? null : data.template_file.userdata.rendered
-    vpc_security_group_ids = ["${aws_security_group.publisher_security_group.id}"]
-    tags = {
-      Name = "${local.workspace["name"]}-CSW_Ubuntu_Publisher"
-    }
-}
+# resource "aws_instance" "ubuntu_publisher_instance" {
+#     count = var.ubuntu_publisher ? 1 : 0
+#     ami = var.ubuntu_publisher_instance_ami
+#     instance_type = var.ubuntu_publisher_instance_type
+#     subnet_id = "${aws_subnet.subnet2.id}"
+#     key_name = var.key_name
+#     user_data = length(var.token) == 0 ? null : data.template_file.userdata.rendered
+#     vpc_security_group_ids = ["${aws_security_group.publisher_security_group.id}"]
+#     tags = {
+#       Name = "${local.workspace["name"]}-CSW_Ubuntu_Publisher"
+#     }
+# }
 
-resource "aws_eip" "ubuntu_publisher_eip" {
-  count = var.ubuntu_publisher ? 1 : 0
-  instance = aws_instance.ubuntu_publisher_instance[0].id
-  vpc      = true
-}
+# resource "aws_eip" "ubuntu_publisher_eip" {
+#   count = var.ubuntu_publisher ? 1 : 0
+#   instance = aws_instance.ubuntu_publisher_instance[0].id
+#   vpc      = true
+# }
 
-data template_file "userdata" {
-  template = file("user_data.yaml")
+# data template_file "userdata" {
+#   template = file("user_data.yaml")
 
-  vars = {
-    token       = var.token
-  }
-}
+#   vars = {
+#     token       = var.token
+#   }
+# }
 
 
 

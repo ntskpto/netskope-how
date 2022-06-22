@@ -11,7 +11,8 @@ all:
 
 apply: all
 	@read -p "Enter Workspace Name: " workspace; \
-	terraform workspace select $$workspace \
+	terraform init \
+	&& terraform workspace select $$workspace \
 	&& terraform apply -var-file="terraform.tfvars"
 destroy: all
 	@read -p "Enter Workspace Name: " workspace; \
@@ -20,7 +21,8 @@ destroy: all
 
 apply_ubuntu:
 	@read -p "Enter Workspace Name: " workspace; \
-	terraform workspace select $$workspace \
+	terraform init \
+	&& terraform workspace select $$workspace \
 	&& terraform apply -var ubuntu_publisher=true -var csw_publisher=false -var-file="terraform.tfvars"
 
 	

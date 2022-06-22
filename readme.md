@@ -79,6 +79,11 @@ After running the command you will receive outputs of the created ressources con
 - Student RDP: studentXX.<workspace>.sselab.eu
 
 
+**Environment**: 
+
+![LAB ENVIRONMENT](Images/lab.jpg)
+
+
 ```
 ➜  terraform_workspaces_netskope_csw git:(main) ✗ infracost breakdown --path plan.json
 Detected Terraform plan JSON file at plan.json
@@ -203,5 +208,6 @@ Project: PhilRumi/netskope-csw/plan.json
  OVERALL TOTAL                                                                                     $340.32
 ──────────────────────────────────
 37 cloud resources were detected:
-```
 
+
+```
