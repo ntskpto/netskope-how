@@ -78,6 +78,14 @@ After running the command you will receive outputs of the created ressources con
 - Guacamole HTTPS: guacamole."ENV".sselab.eu
 - Student RDP: studentXX."ENV".sselab.eu
 
+Environments are:
+
+PR
+PK
+MJ
+EN
+GH
+RS
 
 **Environment**: 
 
