@@ -1,11 +1,11 @@
-variable "AWS_SECRET_KEY" {}
+variable "aws_access_key" {}
 
-variable "AWS_ACCESS_KEY" {}
+variable "AWS_secret_key" {}
 
-variable "AWS_REGION" {
+variable "aws_region" {
     default = "eu-central-1"
 }
-variable "AWS_PROFILE" {}
+variable "aws_profile" {}
 
 ############################################################
 #             STUDENT USER PREFIX

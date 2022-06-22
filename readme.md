@@ -33,12 +33,12 @@ Create (or edit) the ~/.aws/credentials file and insert the following AWS profil
     aws_secret_access_key = <Secret  Key>
 
 
-**4. create a terraform.tfvars file with your aws credentials**
+**4. create a terraform.tfvars file with your aws credentials and put it in the working directory of the terraform scripts**
 
 ```
-AWS_ACCESS_KEY = "XXXX"
-AWS_SECRET_KEY = "XXXX"
-AWS_PROFILE     = "csw-profile"
+aws_access_key = "XXXX"
+aws_secret_key = "XXXX"
+aws_profile  = "csw-profile"
 ```
 
    
@@ -49,7 +49,6 @@ terraform works with so called workspaces, so you can switch into individual "wo
 Every workspace creates a DNS subzone of sselab.eu in the initials of the individual instructor
 
   
-
 terraform.state will be saved on remote S3 buckets with versioning, encryption enabled in DynamoDB
 
   
@@ -72,6 +71,17 @@ After running the command you will receive outputs of the created ressources con
 
   
 **estimated infrastructure monthly cost* with 2 student PCs* 340 / 730 hours * 5 hours = **2,30 $ per Workshop**
+
+
+Public DNS access:
+
+Publisher: publisher.<workspace>.sselab.eu
+Master Instructor: master.<workspace>.sselab.eu
+guacamole.<workspace>.sselab.eu
+
+RDP for student machines:
+studentXX.<workspace>.sselab.eu
+
 
 ```
 ➜  terraform_workspaces_netskope_csw git:(main) ✗ infracost breakdown --path plan.json
