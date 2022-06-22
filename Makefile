@@ -23,6 +23,6 @@ apply_ubuntu: all
 	@read -p "Enter Workspace Name: " workspace; \
 	terraform init \
 	&& terraform workspace select $$workspace \
-	&& terraform apply -var ubuntu_publisher=true -var csw_publisher=false -var-file="terraform.tfvars"
+	&& terraform apply -var ubuntu_publisher=true -var csw_publisher=false -var-file="terraform.tfvars" -var token=""
 
 	
