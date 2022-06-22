@@ -130,7 +130,6 @@ variable "ubuntu_publisher" {
 variable "token" {
   description = "Enter the new Publisher token, otherwise leave empty"
   type        = string
-  default     = ""
 }
 
 

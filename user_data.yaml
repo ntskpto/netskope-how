@@ -7,7 +7,7 @@
 
 # {# REQUIRED - Provide the Publisher enrolment key/token. Ensure to paste it within the double quotes! #}
 # {# Leaving this as the default value will install the publisher software, but not enrol it. #}
-{% set token = ${token} %}
+{% set token = "${token}" %}
 
 # {# OPTIONAL - Import an SSH key from a public keyserver (GitHub). Enter your GitHub username, eg: "nathancatania" #}
 # {# Leave default if not needed #}
@@ -65,7 +65,7 @@ packages:
   - lsb-release
   - software-properties-common
   - net-tools
-  - bind9-utils
+  - bind9utils
   - ufw
   - cracklib-runtime
 
