@@ -2,7 +2,7 @@
 
   IAM credentials and environmental access will be provided by the DACH netskope team / Phil Rumi
   
-**1. Install Packet Managers**
+**1. Install packet manager**
 
 
 ```
@@ -102,11 +102,6 @@ RS
 
 
 ```
-➜  terraform_workspaces_netskope_csw git:(main) ✗ infracost breakdown --path plan.json
-Detected Terraform plan JSON file at plan.json
-  ✔ Extracting only cost-related params from terraform
-  ✔ Retrieving cloud prices to calculate costs
-
 Project: PhilRumi/netskope-csw/plan.json
 
  Name                                                      Monthly Qty  Unit                  Monthly Cost
