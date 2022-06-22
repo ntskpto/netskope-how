@@ -2,7 +2,7 @@
 
   IAM credentials and environmental access will be provided by the DACH netskope team / Phil Rumi
   
-**1. Install packet manager**
+**1. install packet manager**
 
 
 ```
