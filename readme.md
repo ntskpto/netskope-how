@@ -84,6 +84,10 @@ After running the command you will receive outputs of the created ressources con
 ![LAB ENVIRONMENT](Images/lab.jpg)
 
 
+
+**estimated infrastructure monthly cost* with 2 student PCs* 340 / 730 hours * 5 hours = **2,30 $ per Workshop**
+
+
 ```
 ➜  terraform_workspaces_netskope_csw git:(main) ✗ infracost breakdown --path plan.json
 Detected Terraform plan JSON file at plan.json
