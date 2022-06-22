@@ -105,20 +105,20 @@ resource "aws_route53_record" "aws_sub_zone_ns" {
 
 # Für den Fall des neuen UBUNTU Publishers mit Token
 
-# resource "aws_route53_record" "ubuntu_publisher_public_records" {
-#     count = var.ubuntu_publisher ? 1 : 0
-#     zone_id = aws_route53_zone.aws_sub_zone.zone_id
-#     name    = "publisher"
-#     type    = "A"
-#     ttl     = "30"
-#     records = [aws_eip.ubuntu_publisher_eip[0].public_ip]
-# }
+resource "aws_route53_record" "ubuntu_publisher_public_records" {
+    count = var.ubuntu_publisher ? 1 : 0
+    zone_id = aws_route53_zone.aws_sub_zone.zone_id
+    name    = "publisher"
+    type    = "A"
+    ttl     = "30"
+    records = [aws_eip.ubuntu_publisher_eip[0].public_ip]
+}
 
-# resource "aws_route53_record" "ubuntu_publisher_private_records" {
-#     count = var.ubuntu_publisher ? 1 : 0
-#     zone_id = aws_route53_zone.private_zone.zone_id
-#     name    = "publisher"
-#     type    = "A"
-#     ttl     = "30"
-#     records = [aws_instance.ubuntu_publisher_instance[0].private_ip]
-# }
+resource "aws_route53_record" "ubuntu_publisher_private_records" {
+    count = var.ubuntu_publisher ? 1 : 0
+    zone_id = aws_route53_zone.private_zone.zone_id
+    name    = "publisher"
+    type    = "A"
+    ttl     = "30"
+    records = [aws_instance.ubuntu_publisher_instance[0].private_ip]
+}
