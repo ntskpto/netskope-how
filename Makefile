@@ -19,7 +19,7 @@ destroy: all
 	terraform workspace select $$workspace \
 	&& terraform destroy -auto-approve -var 'student_instance_count=15' -var-file="terraform.tfvars"
 
-apply_ubuntu:
+apply_ubuntu: all
 	@read -p "Enter Workspace Name: " workspace; \
 	terraform init \
 	&& terraform workspace select $$workspace \

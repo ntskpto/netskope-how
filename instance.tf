@@ -49,7 +49,7 @@ data template_cloudinit_config "userdata" {
     content      = <<-EOF
     #!/bin/bash
     /home/centos/npa_publisher_wizard -token ${var.token}
-   yum update -y
+    yum update -y
     EOF
   }
 }
