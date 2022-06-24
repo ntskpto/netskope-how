@@ -15,10 +15,10 @@ apply: all
 destroy: all
 	@read -p "Enter Workspace Name: " workspace; \
 	terraform workspace select $$workspace \
-	&& terraform destroy -auto-approve -var student_instance_count=15 -var-file="terraform.tfvars"
+	&& terraform destroy -auto-approve -var student_instance_count=15 -var-file="terraform.tfvars" -var token=""
 
 apply_ubuntu: all
 	@read -p "Enter Workspace Name: " workspace; \
 	terraform init \
 	&& terraform workspace select $$workspace \
-	&& terraform apply -var ubuntu_publisher=true -var csw_publisher=false -var-file="terraform.tfvars" -var token=""
+	&& terraform apply -var ubuntu_publisher=true -var csw_publisher=false -var-file="terraform.tfvars"
