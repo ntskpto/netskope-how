@@ -20,7 +20,8 @@ Windows - https://chocolatey.org/install
   
 **3. modify aws credentials file**
    
-Create (or edit) the ~/.aws/credentials file and insert the following AWS profile
+Create (or edit) the ~/.aws/credentials (mac) or /%USERPROFILE%\.aws\credentials (win)
+ file and insert the following AWS profile
 
     [csw-profile]
     aws_access_key_id = <Access  Key>
