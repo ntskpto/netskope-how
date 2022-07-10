@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul 10 17:52:11 2022
+# Make data base, printed on Sun Jul 10 18:15:49 2022
 
 # Variables
 
@@ -17,7 +17,7 @@ LC_ALL = C
 # environment
 TMPDIR = /var/folders/ph/hl55_ywn2vs6_55zzr60mh100000gp/T/
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.72613274.72613280.BBCC49CE-C139-44ED-B1B8-A48166072F91
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.72613274.72613280.983F5EFB-65F2-49B7-857F-381BAE652B1E
 # environment
 VSCODE_CWD = /Users/prumi/Desktop/CSW_automation/terraform_workspaces_netskope_csw
 # environment
@@ -205,9 +205,9 @@ TERM_PROGRAM_VERSION = 3.4.16
 
 # Directories
 
-# . (device 16777225, inode 72374629): 21 files, no impossibilities.
+# . (device 16777225, inode 72374629): 22 files, no impossibilities.
 
-# 21 files, no impossibilities in 1 directories.
+# 22 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -306,12 +306,12 @@ apply: all
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 29 / storage = 318 B / avg = 10 B
-# current buf: size = 8162 B / used = 318 B / count = 29 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 30 / storage = 335 B / avg = 11 B
+# current buf: size = 8162 B / used = 335 B / count = 30 / avg = 11 B
 
-# strcache performance: lookups = 41 / hit rate = 29%
+# strcache performance: lookups = 42 / hit rate = 28%
 # hash-table stats:
-# Load=29/8192=0%, Rehash=0, Collisions=0/41=0%
-# Finished Make data base on Sun Jul 10 17:52:11 2022
+# Load=30/8192=0%, Rehash=0, Collisions=0/42=0%
+# Finished Make data base on Sun Jul 10 18:15:49 2022
 
  
