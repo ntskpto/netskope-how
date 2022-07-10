@@ -32,7 +32,7 @@ resource "aws_instance" "publisher_instance" {
     tags = {
       Name = "${local.workspace["name"]}-CSW_Publisher"
     }
-    user_data     = length(var.token) == 0 ? null : data.template_cloudinit_config.userdata.rendered
+    # user_data     = length(var.token) == 0 ? null : data.template_cloudinit_config.userdata.rendered #####userdata als txt bedingung an variable
 }
 
 resource "aws_eip" "publisher_eip" {
@@ -41,18 +41,18 @@ resource "aws_eip" "publisher_eip" {
   vpc      = true
 }
 
-data template_cloudinit_config "userdata" {
-  gzip          = false
-  base64_encode = false
-  part {
-    content_type = "text/x-shellscript"
-    content      = <<-EOF
-    #!/bin/bash
-    /home/centos/npa_publisher_wizard -token ${var.token}
-    yum update -y
-    EOF
-  }
-}
+# data template_cloudinit_config "userdata" { #####userdata direkt als txt mitgeben
+#   gzip          = false
+#   base64_encode = false
+#   part {
+#     content_type = "text/x-shellscript"
+#     content      = <<-EOF
+#     #!/bin/bash
+#     /home/centos/npa_publisher_wizard -token ${var.token}
+#     yum update -y
+#     EOF
+#   }
+# }
 
 ############################################################
 ### Webserver Instance
