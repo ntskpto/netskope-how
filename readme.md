@@ -28,12 +28,12 @@ Create (or edit) the ~/.aws/credentials (mac) or /%USERPROFILE%\.aws\credentials
     aws_secret_access_key = <Secret  Key>
 
 
-**4. create a terraform.tfvars file with your aws credentials and put it in the working directory of the terraform scripts**
+**4. create a terraform.tfvars file with the provided aws credentials and put it in the working directory of the terraform scripts**
 
 ```
 aws_access_key = "XXXX"
 aws_secret_key = "XXXX"
-aws_profile  = "csw-profile"
+aws_region     = "eu-central-1"
 ```
 
    
