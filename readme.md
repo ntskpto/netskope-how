@@ -1,7 +1,6 @@
 ﻿**<h1> Netskope Cloud Security Workshop automation through Terraform Workspaces </h1>**
 
-  IAM credentials and environmental access will be provided by the DACH netskope team / Phil Rumi<br>
-  **SLACK: #netskope-csw** with all pinned information and howto
+  **SLACK: #netskope-csw** with all pinned information and credentials
 
 --- 
 
@@ -22,65 +21,21 @@ Install Docker
 As the docker container mounts a local volume dir you need to have the "data" folder inside your current working directory containing the relevant terraform files (internal - pinned to the slack channel)
 
 **to start the environment**<br>
-docker run -i -t prumi88/terraform-csw:alpine make apply<br>
+```
+docker run -i -t prumi88/terraform-csw:alpine make apply
+```
+
+
 **to start the environment with a new publisher and token connect**<br>
-docker run -i -t prumi88/terraform-csw:alpine make apply_ubuntu<br>
+```
+docker run -i -t prumi88/terraform-csw:alpine make apply_ubuntu
+```
 **to destroy the environment**<br>
-docker run -i -t prumi88/terraform-csw:alpine make destroy<br>
+```
+docker run -i -t prumi88/terraform-csw:alpine make destroy
 
+```
 ---
-
-**<h3>the manual way:</h3>**
-
-
-**1. install packet manager**
-
-
-
-MacOS - Install HomeBrew via /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-Windows - https://chocolatey.org/install
-
-**2. install packages:**
-
-- awscli
-- make
-- terraform
-  
-**3. modify aws credentials file**
-   
-Create (or edit) the ~/.aws/credentials (mac) or /%USERPROFILE%\.aws\credentials (win)
- file and insert the following AWS profile
-
-    [csw-profile]
-    aws_access_key_id = <Access  Key>
-    aws_secret_access_key = <Secret  Key>
-
-
-**4. create a terraform.tfvars file with the provided aws credentials and put it in the working directory of the terraform scripts**
-
-```
-aws_access_key = "XXXX"
-aws_secret_key = "XXXX"
-aws_region     = "eu-central-1"
-```
-
-    make apply 
-
-After running the command you will receive outputs of the created ressources containing the DNS names to access the ressources
-If you do want to create a NEW publisher and connect it to your tenant via TOKEN, you can run 
-
-
-```
-make apply_ubuntu
-```
-This will ask for the $token value you can pass on while creating this publisher
-
-
-**to destroy the environment**
-
-
-    make destroy
 
 
 **estimated infrastructure monthly cost* with 2 student PCs* 340 / 730 hours * 5 hours = **2,30 $ per Workshop**
