@@ -1,7 +1,33 @@
 ﻿<h2> Netskope Cloud Security Workshop automation through Terraform Workspaces </h2>
 
   IAM credentials and environmental access will be provided by the DACH netskope team / Phil Rumi
+  SLACK: #netskope-csw with all pinned information and howto
   
+This terraform module creates Netskope Hands On Lab Environment with predefined custom student images that contain neccessary configuration parameters for the lab
+
+terraform works with so called workspaces, so you can switch into individual "working environments". One can create multiple lab environments in different workingspaces at the same time.
+
+Every workspace creates a DNS subzone of sselab.eu in the initials of the individual instructor
+
+terraform.state will be saved on remote S3 buckets with versioning, encryption enabled in DynamoDB
+
+
+**You can use a predefined docker container containing all relevant binaries like terraform, awscli and Make to simply spin up this environment. As we use a shared AWS environment with subdomains for external access, please reach out in SLACK for the relevant data**
+
+Install Docker 
+
+As the docker container mounts a local volume dir you need to have the "data" folder inside your current working directory containing the relevant terraform files (internal - pinned to the slack channel)
+
+**to start the environment**
+docker run -i -t prumi88/terraform-csw:alpine make apply
+**to start the environment with a new publisher and token connect**
+docker run -i -t prumi88/terraform-csw:alpine make apply_ubuntu
+**to destroy the environment**
+docker run -i -t prumi88/terraform-csw:alpine make destroy
+
+
+**the manual way:**
+
 **1. install packet manager**
 
 
@@ -10,7 +36,6 @@ MacOS - Install HomeBrew via /bin/bash -c "$(curl -fsSL https://raw.githubuserco
 
 Windows - https://chocolatey.org/install
 ```
-
 
 **2. install packages:**
 
@@ -36,27 +61,9 @@ aws_secret_key = "XXXX"
 aws_region     = "eu-central-1"
 ```
 
-   
-This terraform module creates Netskope Hands On Lab Environment with predefined custom student images that contain neccessary configuration parameters for the lab
-
-terraform works with so called workspaces, so you can switch into individual "working environments". One can create multiple lab environments in different workingspaces at the same time.
-
-Every workspace creates a DNS subzone of sselab.eu in the initials of the individual instructor
-
-  
-terraform.state will be saved on remote S3 buckets with versioning, encryption enabled in DynamoDB
-
-  
-
-**to start the environment**
-
-  
-
     make apply 
 
-  
 After running the command you will receive outputs of the created ressources containing the DNS names to access the ressources
-
 If you do want to create a NEW publisher and connect it to your tenant via TOKEN, you can run 
 
 
@@ -68,10 +75,8 @@ This will ask for the $token value you can pass on while creating this publisher
 
 **to destroy the environment**
 
-  
 
     make destroy
-
 
 
 **estimated infrastructure monthly cost* with 2 student PCs* 340 / 730 hours * 5 hours = **2,30 $ per Workshop**
@@ -84,143 +89,8 @@ This will ask for the $token value you can pass on while creating this publisher
 - Guacamole HTTPS: guacamole."ENV".sselab.eu
 - Student RDP: studentXX."ENV".sselab.eu
 
-Environments are:
-
-PR
-PK
-MJ
-EN
-GH
-RS
+environments can be extended in the workspaces.tf file by copying the relevant data block using a new name
 
 **Environment**: 
 
 ![LAB ENVIRONMENT](Images/lab.jpg)
-
-
-
-**estimated infrastructure monthly cost* with 2 student PCs* 340 / 730 hours * 5 hours = **2,30 $ per Workshop**
-
-
-```
-Project: PhilRumi/netskope-csw/plan.json
-
- Name                                                      Monthly Qty  Unit                  Monthly Cost
-
- aws_eip.guacamole_instance_eip
- └─ IP address (if unused)                                         730  hours                        $3.65
-
- aws_eip.master_instance_eip
- └─ IP address (if unused)                                         730  hours                        $3.65
-
- aws_eip.publisher_eip[0]
- └─ IP address (if unused)                                         730  hours                        $3.65
-
- aws_eip.student_eip[0]
- └─ IP address (if unused)                                         730  hours                        $3.65
-
- aws_eip.student_eip[1]
- └─ IP address (if unused)                                         730  hours                        $3.65
-
- aws_instance.guacamole_instance
- ├─ Instance usage (Linux/UNIX, on-demand, t3.large)               730  hours                       $70.08
- └─ root_block_device
-    └─ Storage (general purpose SSD, gp2)                            8  GB                           $0.95
-
- aws_instance.master_instance
- ├─ Instance usage (Linux/UNIX, on-demand, t3.large)               730  hours                       $70.08
- └─ root_block_device
-    └─ Storage (general purpose SSD, gp2)                            8  GB                           $0.95
-
- aws_instance.publisher_instance[0]
- ├─ Instance usage (Linux/UNIX, on-demand, t3.small)               730  hours                       $17.52
- └─ root_block_device
-    └─ Storage (general purpose SSD, gp2)                            8  GB                           $0.95
-
- aws_instance.student_instance[0]
- ├─ Instance usage (Linux/UNIX, on-demand, t3.large)               730  hours                       $70.08
- └─ root_block_device
-    └─ Storage (general purpose SSD, gp2)                            8  GB                           $0.95
-
- aws_instance.student_instance[1]
- ├─ Instance usage (Linux/UNIX, on-demand, t3.large)               730  hours                       $70.08
- └─ root_block_device
-    └─ Storage (general purpose SSD, gp2)                            8  GB                           $0.95
-
- aws_instance.webserver_instance
- ├─ Instance usage (Linux/UNIX, on-demand, t3.small)               730  hours                       $17.52
- └─ root_block_device
-    └─ Storage (general purpose SSD, gp2)                            8  GB                           $0.95
-
- aws_route53_record.aws_sub_zone_ns
- ├─ Standard queries (first 1B)                       Monthly cost depends on usage: $0.40 per 1M queries
- ├─ Latency based routing queries (first 1B)          Monthly cost depends on usage: $0.60 per 1M queries
- └─ Geo DNS queries (first 1B)                        Monthly cost depends on usage: $0.70 per 1M queries
-
- aws_route53_record.guacamole_private_record
- ├─ Standard queries (first 1B)                       Monthly cost depends on usage: $0.40 per 1M queries
- ├─ Latency based routing queries (first 1B)          Monthly cost depends on usage: $0.60 per 1M queries
- └─ Geo DNS queries (first 1B)                        Monthly cost depends on usage: $0.70 per 1M queries
-
- aws_route53_record.guacamole_public_record
- ├─ Standard queries (first 1B)                       Monthly cost depends on usage: $0.40 per 1M queries
- ├─ Latency based routing queries (first 1B)          Monthly cost depends on usage: $0.60 per 1M queries
- └─ Geo DNS queries (first 1B)                        Monthly cost depends on usage: $0.70 per 1M queries
-
- aws_route53_record.master_private_record
- ├─ Standard queries (first 1B)                       Monthly cost depends on usage: $0.40 per 1M queries
- ├─ Latency based routing queries (first 1B)          Monthly cost depends on usage: $0.60 per 1M queries
- └─ Geo DNS queries (first 1B)                        Monthly cost depends on usage: $0.70 per 1M queries
-
- aws_route53_record.master_public_record
- ├─ Standard queries (first 1B)                       Monthly cost depends on usage: $0.40 per 1M queries
- ├─ Latency based routing queries (first 1B)          Monthly cost depends on usage: $0.60 per 1M queries
- └─ Geo DNS queries (first 1B)                        Monthly cost depends on usage: $0.70 per 1M queries
-
- aws_route53_record.publisher_private_records[0]
- ├─ Standard queries (first 1B)                       Monthly cost depends on usage: $0.40 per 1M queries
- ├─ Latency based routing queries (first 1B)          Monthly cost depends on usage: $0.60 per 1M queries
- └─ Geo DNS queries (first 1B)                        Monthly cost depends on usage: $0.70 per 1M queries
-
- aws_route53_record.publisher_public_records[0]
- ├─ Standard queries (first 1B)                       Monthly cost depends on usage: $0.40 per 1M queries
- ├─ Latency based routing queries (first 1B)          Monthly cost depends on usage: $0.60 per 1M queries
- └─ Geo DNS queries (first 1B)                        Monthly cost depends on usage: $0.70 per 1M queries
-
- aws_route53_record.student_private_records[0]
- ├─ Standard queries (first 1B)                       Monthly cost depends on usage: $0.40 per 1M queries
- ├─ Latency based routing queries (first 1B)          Monthly cost depends on usage: $0.60 per 1M queries
- └─ Geo DNS queries (first 1B)                        Monthly cost depends on usage: $0.70 per 1M queries
-
- aws_route53_record.student_private_records[1]
- ├─ Standard queries (first 1B)                       Monthly cost depends on usage: $0.40 per 1M queries
- ├─ Latency based routing queries (first 1B)          Monthly cost depends on usage: $0.60 per 1M queries
- └─ Geo DNS queries (first 1B)                        Monthly cost depends on usage: $0.70 per 1M queries
-
- aws_route53_record.student_public_records[0]
- ├─ Standard queries (first 1B)                       Monthly cost depends on usage: $0.40 per 1M queries
- ├─ Latency based routing queries (first 1B)          Monthly cost depends on usage: $0.60 per 1M queries
- └─ Geo DNS queries (first 1B)                        Monthly cost depends on usage: $0.70 per 1M queries
-
- aws_route53_record.student_public_records[1]
- ├─ Standard queries (first 1B)                       Monthly cost depends on usage: $0.40 per 1M queries
- ├─ Latency based routing queries (first 1B)          Monthly cost depends on usage: $0.60 per 1M queries
- └─ Geo DNS queries (first 1B)                        Monthly cost depends on usage: $0.70 per 1M queries
-
- aws_route53_record.webserver_private_record
- ├─ Standard queries (first 1B)                       Monthly cost depends on usage: $0.40 per 1M queries
- ├─ Latency based routing queries (first 1B)          Monthly cost depends on usage: $0.60 per 1M queries
- └─ Geo DNS queries (first 1B)                        Monthly cost depends on usage: $0.70 per 1M queries
-
- aws_route53_zone.aws_sub_zone
- └─ Hosted zone                                                      1  months                       $0.50
-
- aws_route53_zone.private_zone
- └─ Hosted zone                                                      1  months                       $0.50
-
- OVERALL TOTAL                                                                                     $340.32
-──────────────────────────────────
-37 cloud resources were detected:
-
-
-```
