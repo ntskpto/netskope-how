@@ -23,6 +23,11 @@ output "guacamole_public_dns" {
   value = aws_route53_record.guacamole_public_record.fqdn
 }
 
+output "master_public_dns" {
+  value = aws_route53_record.master_public_record.fqdn
+}
+
+
 # output userdata {
 #   value = "\n${data.template_cloudinit_config.userdata.rendered}"
 # }
