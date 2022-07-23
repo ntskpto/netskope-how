@@ -1,7 +1,7 @@
 ﻿**<h1> Netskope Cloud Security Workshop automation through Terraform Workspaces </h1>**
 
   IAM credentials and environmental access will be provided by the DACH netskope team / Phil Rumi<br>
-  SLACK: #netskope-csw with all pinned information and howto
+  **SLACK: #netskope-csw** with all pinned information and howto
 
 --- 
 
