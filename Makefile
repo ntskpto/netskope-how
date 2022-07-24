@@ -1,11 +1,7 @@
+MYVAR := $(shell cat workspaces.tf | awk '{for (i=1;i<=NF;i++) if ($$i == "name") {print $$3}}' workspaces.tf)
 all:
-	@echo "WORKSPACES AVAILABLE:"
-	@echo "marcus"
-	@echo "phil"
-	@echo "rainer"
-	@echo "eugen"
-	@echo "georg"
-	@echo "patrick"
+	@echo "WORKSPACES AVAILABLE"
+	@echo $(MYVAR)
 
 apply: all
 	@read -p "Enter Workspace Name: " workspace; \
