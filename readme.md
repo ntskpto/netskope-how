@@ -14,7 +14,7 @@ terraform.state will be saved on remote S3 buckets with versioning, encryption e
 
 ---
 
-**You can use a predefined docker container containing all relevant binaries like terraform, awscli and Make to simply spin up this environment. <br> As we use a shared AWS environment with subdomains for external access, please reach out in SLACK for the relevant data**
+**please reach out in SLACK for the relevant data**
 
 Install Docker 
 
