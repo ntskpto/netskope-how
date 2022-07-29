@@ -1,8 +1,7 @@
-variable "aws_access_key" {}
-
-variable "aws_secret_key" {}
-
-variable "aws_region" {}
+# variable "aws_region" {
+#     type = string
+#     default = "eu-central-1"
+# }
 
 ############################################################
 #             STUDENT USER PREFIX
