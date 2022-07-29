@@ -14,9 +14,8 @@ terraform.state will be saved on remote S3 buckets with versioning, encryption e
 
 ---
 
-**please reach out in SLACK for the relevant data**
 
-**Install Docker & Docker compose**
+Install Docker & Docker compose
 
 **Export the Cloud Security Workshops AWS environment variables (pinned to slack channel #netskope-csw)**
 
@@ -25,6 +24,7 @@ terraform.state will be saved on remote S3 buckets with versioning, encryption e
 ```
 git clone https://github.com/PhilRumi/netskope-csw
 ```
+
 **put the pinned private key file into data folder**<br>
 
 **to start the environment**<br>
