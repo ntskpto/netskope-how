@@ -16,24 +16,31 @@ terraform.state will be saved on remote S3 buckets with versioning, encryption e
 
 **please reach out in SLACK for the relevant data**
 
-Install Docker 
+Install Docker & Docker compose
 
-As the docker container mounts a local volume dir you need to have the "data" folder inside your current working directory containing the relevant terraform files (internal - pinned to the slack channel)
+Export the Cloud Security Workshops AWS credentials (pinned to slack channel #netskope-csw)
+
+**clone git repo**
+
+```
+git clone https://github.com/PhilRumi/netskope-csw
+```
 
 **to start the environment**<br>
 ```
-docker run -i -t prumi88/terraform-csw:alpine make apply
+docker-compose run cloudworkshop make apply
 ```
-
 
 **to start the environment with a new publisher and token connect**<br>
-```
-docker run -i -t prumi88/terraform-csw:alpine make apply_ubuntu
-```
-**to destroy the environment**<br>
-```
-docker run -i -t prumi88/terraform-csw:alpine make destroy
 
+```
+docker-compose run cloudworkshop make apply_ubuntu
+```
+
+**to destroy the environment**<br>
+
+```
+docker-compose run cloudworkshop make destroy
 ```
 ---
 
