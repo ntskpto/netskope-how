@@ -69,21 +69,23 @@ resource "aws_instance" "guacamole_instance" {
     tags = {
       Name = "${local.workspace["name"]}-CSW_Guacamole"
     } 
-  #   connection {
-  #   type = "ssh"
-  #   host = self.public_ip
-  #   user = "centos"
-  #   private_key = file("./csw.pem")
-  # }
+}
+    resource "null_resource" "configure-guacamole" {
+   connection {
+   type = "ssh"
+   host = aws_eip.guacamole_instance_eip.public_ip
+   user = "centos"
+   private_key = file("./csw.pem")
+ }
 
-  # provisioner "remote-exec" {
-  #   inline = [
-  #     "sudo -i",
-  #     "export env=${local.workspace["namespace"]}",
-  #     # "cd /home/centos/docker_umgebung/guacamole_version1",
-  #     # "docker-compose up -d"
-  #   ]
-  # }  
+ provisioner "remote-exec" {
+   inline = [
+     "sudo echo \"export env=${local.workspace["namespace"]}\" >> ~/.bashrc",
+     "source ~/.bashrc",
+     "cd /home/centos/docker_umgebung/guacamole_version1/",
+     "ocker-compose up -d"
+     ]
+   }  
  }
 
  resource "aws_eip" "guacamole_instance_eip" {

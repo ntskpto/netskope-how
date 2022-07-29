@@ -48,7 +48,7 @@ variable "student_instance_ami" {
 }
 variable "student_instance_type" {
     type = string
-    default = "t3.large"
+    default = "t3.xlarge"
 }
 variable "student_instance_count" {
     type = number 
@@ -84,7 +84,7 @@ variable "guacamole_instance_type" {
 }
 variable "guacamole_instance_ami" {
     type = string
-    default = "ami-00d77d47a2deb5f66"
+    default = "ami-04d29be4d6f442172"
 }
 variable "master_instance_type" {
     type = string
