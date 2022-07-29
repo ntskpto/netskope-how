@@ -83,7 +83,8 @@ resource "aws_instance" "guacamole_instance" {
      "sudo echo \"export env=${local.workspace["namespace"]}\" >> ~/.bashrc",
      "source ~/.bashrc",
      "cd /home/centos/docker_umgebung/guacamole_version1/",
-     "docker-compose up -d"
+     "docker-compose up -d",
+     "exit"
      ]
    }  
  }
