@@ -12,6 +12,5 @@ terraform {
     region         = "eu-central-1"
     dynamodb_table = "terraform-lock"
     encrypt        = true
-    profile        = "csw-profile"
   }
 }
