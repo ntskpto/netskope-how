@@ -17,5 +17,5 @@ terraform.tfstate.backup
 terraform.tfvars
 *.pem
 .terraform*
-
+.DS_Store
 ./data/terraform.tfvars
