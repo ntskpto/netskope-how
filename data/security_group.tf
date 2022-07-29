@@ -102,6 +102,14 @@ ingress {
     cidr_blocks      = ["0.0.0.0/0"]
     
   }
+  ingress {
+    description      = "Allow SSH from everywhere"
+    from_port        = 22
+    to_port          = 22
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+    
+  }
 
     tags = {
         Name = "${local.workspace["guacamole_security_group_name"]}"
