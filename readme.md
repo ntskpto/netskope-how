@@ -18,7 +18,7 @@ terraform.state will be saved on remote S3 buckets with versioning, encryption e
 
 Install Docker & Docker compose
 
-Export the Cloud Security Workshops AWS credentials (pinned to slack channel #netskope-csw)
+**Export the Cloud Security Workshops AWS environment variables (pinned to slack channel #netskope-csw)**
 
 **clone git repo**
 
