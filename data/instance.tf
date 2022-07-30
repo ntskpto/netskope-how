@@ -75,7 +75,7 @@ resource "aws_instance" "guacamole_instance" {
    type = "ssh"
    host = aws_eip.guacamole_instance_eip.public_ip
    user = "centos"
-   private_key = file("./csw.pem")
+   private_key = file("./labkey.pem")
  }
 
  provisioner "remote-exec" {

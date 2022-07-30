@@ -25,8 +25,6 @@ Install Docker & Docker compose
 git clone https://github.com/PhilRumi/netskope-csw
 ```
 
-**put the pinned private key file into data folder**<br>
-
 **to start the environment**<br>
 ```
 docker-compose run cloudworkshop make apply
