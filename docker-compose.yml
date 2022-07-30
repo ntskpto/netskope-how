@@ -1,7 +1,8 @@
-version: "3"
+version: "3.3"
+
 services:
   cloudworkshop:
-    image: terraform-csw:alpine
+    image: prumi88/terraform-csw:alpine
     volumes:
       - ./data/:/usr/local/bin/data/
     environment:
