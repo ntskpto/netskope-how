@@ -5,13 +5,11 @@ git
 *git
 bash
 
-
 # Local History for Visual Studio Code
 .history/
 
 # Built Visual Studio Code Extensions
 *.vsix
-
 
 .terraform/
 **/.terraform/*
@@ -21,4 +19,5 @@ terraform.tfstate.backup
 terraform.tfvars
 .terraform*
 .DS_Store
+DS_Store
 ./data/terraform.tfvars
