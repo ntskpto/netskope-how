@@ -1,6 +1,10 @@
 **/.vscode/
 .vscode/*
 .vscode/
+git
+*git
+bash
+
 
 # Local History for Visual Studio Code
 .history/
