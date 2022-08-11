@@ -15,6 +15,6 @@ destroy: all
 
 apply_ubuntu: all
 	@read -p "Enter Workspace Name: " workspace; \
-    terraform init -backend-config="access_key=${TF_VAR_aws_access_key}" -backend-config="secret_key=${TF_VAR_aws_secret_key}" -backend-config="region=${TF_VAR_aws_region} \
+    terraform init -backend-config="access_key=${TF_VAR_aws_access_key}" -backend-config="secret_key=${TF_VAR_aws_secret_key}" -backend-config="region=${TF_VAR_aws_region}" \
 	&& terraform workspace select $$workspace \
 	&& terraform apply -var ubuntu_publisher=true -var csw_publisher=false 
