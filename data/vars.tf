@@ -44,11 +44,11 @@ variable "key_name" {
 }
 variable "student_instance_ami" {
     type = string
-    default = "ami-0e008fa3078beadc1"
+    default = "ami-06c6afbc876008b86"
 }
 variable "student_instance_type" {
     type = string
-    default = "t3.xlarge"
+    default = "t3.large"
 }
 variable "student_instance_count" {
     type = number 
