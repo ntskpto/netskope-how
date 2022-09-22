@@ -44,7 +44,7 @@ variable "key_name" {
 }
 variable "student_instance_ami" {
     type = string
-    default = "ami-06c6afbc876008b86"
+    default = "	ami-037a09e8088407aca"
 }
 variable "student_instance_type" {
     type = string
@@ -92,7 +92,7 @@ variable "master_instance_type" {
 }
 variable "master_instance_ami" {
     type = string
-    default = "ami-00f9ebb45c202d9c8"
+    default = "ami-0c1e6dc9f1cc6950c"
 }
 ############################################################
 #             route53.tf VARIABLES 
