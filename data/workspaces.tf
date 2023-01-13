@@ -17,23 +17,22 @@ locals {
       igw_name                      = "igw-marcus"
       namespace                     = "mj"
     }
-
-    phil = {
-      name                    = "phil"
+    seb = {
+      name                    = "seb"
       vpc_cidr                = ["10.0.0.0/16"]
       subnet1_cidr            = ["10.0.1.0/24"]
       subnet2_cidr            = ["10.0.2.0/24"]
-      vpc_name                = "vpc-phil-csw"
-      subnet1_name            = "Subnet1-phil"
-      subnet2_name            = "Subnet2-phil"
-      publisher_security_group_name = "publisher-SG-phil"
-      webserver_security_group_name = "webserver-SG-phil"
-      student_security_group_name   = "student-SG-phil"
-      guacamole_security_group_name = "guacamole-SG-phil"
-      master_security_group_name    = "master-SG-phil"
-      route_table1_name             = "route-table-phil"
-      igw_name                      = "igw-phil"
-      namespace                     = "pr"
+      vpc_name                = "vpc-seb-csw"
+      subnet1_name            = "Subnet1-seb"
+      subnet2_name            = "Subnet2-seb"
+      publisher_security_group_name = "publisher-SG-seb"
+      webserver_security_group_name = "webserver-SG-seb"
+      student_security_group_name   = "student-SG-seb"
+      guacamole_security_group_name = "guacamole-SG-seb"
+      master_security_group_name    = "master-SG-seb"
+      route_table1_name             = "route-table-seb"
+      igw_name                      = "igw-seb"
+      namespace                     = "st"
     }
     georg = {
       name                    = "georg"
@@ -52,22 +51,22 @@ locals {
       igw_name                      = "igw-georg"
       namespace                     = "gh"
     }
-    rainer = {
-      name                    = "rainer"
+    andre = {
+      name                    = "andre"
       vpc_cidr                = ["10.3.0.0/16"]
       subnet1_cidr            = ["10.3.1.0/24"]
       subnet2_cidr            = ["10.3.2.0/24"]
-      vpc_name                = "vpc-rainer-csw"
-      subnet1_name            = "Subnet1-rainer"
-      subnet2_name            = "Subnet2-rainer"
-      publisher_security_group_name = "publisher-SG-rainer"
-      webserver_security_group_name = "webserver-SG-rainer"
-      student_security_group_name   = "student-SG-rainer"
-      guacamole_security_group_name = "guacamole-SG-rainer"
-      master_security_group_name    = "master-SG-rainer"
-      route_table1_name             = "route-table-rainer"
-      igw_name                      = "igw-rainer"
-      namespace                     = "rs"
+      vpc_name                = "vpc-andre-csw"
+      subnet1_name            = "Subnet1-andre"
+      subnet2_name            = "Subnet2-andre"
+      publisher_security_group_name = "publisher-SG-andre"
+      webserver_security_group_name = "webserver-SG-andre"
+      student_security_group_name   = "student-SG-andre"
+      guacamole_security_group_name = "guacamole-SG-andre"
+      master_security_group_name    = "master-SG-andre"
+      route_table1_name             = "route-table-andre"
+      igw_name                      = "igw-andre"
+      namespace                     = "as"
     }
     eugen = {
       name                    = "eugen"
@@ -86,24 +85,40 @@ locals {
       igw_name                      = "igw-eugen"
       namespace                     = "en"
     }
-        patrick = {
-      name                    = "patrick"
+    thomas = {
+      name                    = "thomas"
       vpc_cidr                = ["10.5.0.0/16"]
       subnet1_cidr            = ["10.5.1.0/24"]
       subnet2_cidr            = ["10.5.2.0/24"]
-      vpc_name                = "vpc-patrick-csw"
-      subnet1_name            = "Subnet1-patrick"
-      subnet2_name            = "Subnet2-patrick"
-      publisher_security_group_name = "publisher-SG-patrick"
-      webserver_security_group_name = "webserver-SG-patrick"
-      student_security_group_name   = "student-SG-patrick"
-      guacamole_security_group_name = "guacamole-SG-patrick"
-      master_security_group_name    = "master-SG-patrick"
-      route_table1_name             = "route-table-patrick"
-      igw_name                      = "igw-patrick"
-      namespace                     = "pk"
+      vpc_name                = "vpc-thomas-csw"
+      subnet1_name            = "Subnet1-thomas"
+      subnet2_name            = "Subnet2-thomas"
+      publisher_security_group_name = "publisher-SG-thomas"
+      webserver_security_group_name = "webserver-SG-thomas"
+      student_security_group_name   = "student-SG-thomas"
+      guacamole_security_group_name = "guacamole-SG-thomas"
+      master_security_group_name    = "master-SG-thomas"
+      route_table1_name             = "route-table-thomas"
+      igw_name                      = "igw-thomas"
+      namespace                     = "to"
+    }
+	brice = {
+      name                    = "brice"
+      vpc_cidr                = ["10.6.0.0/16"]
+      subnet1_cidr            = ["10.6.1.0/24"]
+      subnet2_cidr            = ["10.6.2.0/24"]
+      vpc_name                = "vpc-brice-csw"
+      subnet1_name            = "Subnet1-brice"
+      subnet2_name            = "Subnet2-brice"
+      publisher_security_group_name = "publisher-SG-brice"
+      webserver_security_group_name = "webserver-SG-brice"
+      student_security_group_name   = "student-SG-brice"
+      guacamole_security_group_name = "guacamole-SG-brice"
+      master_security_group_name    = "master-SG-brice"
+      route_table1_name             = "route-table-brice"
+      igw_name                      = "igw-brice"
+      namespace                     = "br"
     }
   }
   workspace = "${local.env[terraform.workspace]}"
 }
-
