@@ -30,9 +30,9 @@ Install Docker & Docker compose
                            ```
 
 **to destroy the environment:**
-                           ```
-                           docker-compose run cloudworkshop make destroy
-                           ```
+                                ```
+                                docker-compose run cloudworkshop make destroy
+                                ```
 ---
 
 
