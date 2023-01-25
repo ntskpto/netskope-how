@@ -25,14 +25,14 @@ Install Docker & Docker compose
          ```
 
 **to start the environment:**
-   ```
-   docker-compose run cloudworkshop make apply
-   ```
+                           ```
+                           docker-compose run cloudworkshop make apply
+                           ```
 
 **to destroy the environment:**
-   ```
-   docker-compose run cloudworkshop make destroy
-   ```
+                           ```
+                           docker-compose run cloudworkshop make destroy
+                           ```
 ---
 
 
