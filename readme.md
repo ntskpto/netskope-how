@@ -20,7 +20,6 @@ Install Docker & Docker compose
 **Export the Cloud Security Workshops AWS environment variables (pinned to slack channel #netskope-csw)**
 
 **clone git repo**
-
 ```
 git clone https://github.com/PhilRumi/netskope-csw
 ```
