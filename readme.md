@@ -10,22 +10,21 @@ terraform.state will be saved on remote S3 buckets with versioning, encryption e
 
 ---
 
+**1) Install Docker & Docker compose**
 
-Install Docker & Docker compose
+**2) Set the Hand-On-Workshops AWS environment variables (pinned to slack channel #dach-how_aka-csw)**
 
-**Export the Cloud Security Workshops AWS environment variables (pinned to slack channel #netskope-csw)**
-
-**clone git repo:**
+**3) Clone the git repository:**
          ```
          git clone https://github.com/PhilRumi/netskope-csw
          ```
 
-**to start the environment:**
+**4a) To start the environment:**
                            ```
                            docker-compose run cloudworkshop make apply
                            ```
 
-**to destroy the environment:**
+**4b)to destroy the environment:**
                                      ```
                                      docker-compose run cloudworkshop make destroy
                                      ```
