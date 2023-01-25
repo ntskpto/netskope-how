@@ -2,9 +2,9 @@ locals {
   env = {
     marcus = {
       name                    = "marcus"
-      vpc_cidr                = ["10.1.0.0/16"]
-      subnet1_cidr            = ["10.1.1.0/24"]
-      subnet2_cidr            = ["10.1.2.0/24"]
+      vpc_cidr                = ["10.0.0.0/16"]
+      subnet1_cidr            = ["10.0.1.0/24"]
+      subnet2_cidr            = ["10.0.2.0/24"]
       vpc_name                = "vpc-marcus-csw"
       subnet1_name            = "Subnet1-Marcus"
       subnet2_name            = "Subnet2-Marcus"
@@ -19,9 +19,9 @@ locals {
     }
     seb = {
       name                    = "seb"
-      vpc_cidr                = ["10.0.0.0/16"]
-      subnet1_cidr            = ["10.0.1.0/24"]
-      subnet2_cidr            = ["10.0.2.0/24"]
+      vpc_cidr                = ["10.1.0.0/16"]
+      subnet1_cidr            = ["10.1.1.0/24"]
+      subnet2_cidr            = ["10.1.2.0/24"]
       vpc_name                = "vpc-seb-csw"
       subnet1_name            = "Subnet1-seb"
       subnet2_name            = "Subnet2-seb"
