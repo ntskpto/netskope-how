@@ -20,19 +20,19 @@ Install Docker & Docker compose
 **Export the Cloud Security Workshops AWS environment variables (pinned to slack channel #netskope-csw)**
 
 **clone git repo:**
-      ```
-      git clone https://github.com/PhilRumi/netskope-csw
-      ```
+```
+git clone https://github.com/PhilRumi/netskope-csw
+```
 
-**to start the environment:**<br>
-                    ```
-                     docker-compose run cloudworkshop make apply
-                    ```
+**to start the environment:**
+```
+docker-compose run cloudworkshop make apply
+```
 
-**to destroy the environment:**<br>
-      ```
-      docker-compose run cloudworkshop make destroy
-      ```
+**to destroy the environment:**
+```
+docker-compose run cloudworkshop make destroy
+```
 ---
 
 
