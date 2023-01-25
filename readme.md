@@ -41,14 +41,14 @@ Install Docker & Docker compose
 
 
 **Public DNS access:**
-
 - Publisher SSH: publisher."ENV".sselab.eu
 - Master Instructor RDP: master."ENV".sselab.eu
 - Guacamole HTTPS: guacamole."ENV".sselab.eu
 - Student RDP: studentXX."ENV".sselab.eu
 
-environments can be extended in the workspaces.tf file by copying the relevant data block using a new name
+**Environments can be extended by:** 
+- 1st modifying the "workspaces.tf" file by copying the relevant data block using a new name
+- 2nd creating the new workspace by unsing "docker-compose run cloudworkshop terraform workspace new <name>"
 
 **Environment**: 
-
 ![LAB ENVIRONMENT](Images/lab.jpg)
