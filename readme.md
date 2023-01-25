@@ -1,9 +1,5 @@
 ﻿**<h1> Netskope Cloud Security Workshop automation through Terraform Workspaces </h1>**
 
-  **SLACK: #netskope-csw** with all pinned information and credentials
-
---- 
-
 This terraform module creates Netskope Hands On Lab Environment with predefined custom student images that contain neccessary configuration parameters for the lab
 
 terraform works with so called workspaces, so you can switch into individual "working environments". One can create multiple lab environments in different workingspaces at the same time.
@@ -35,10 +31,7 @@ Install Docker & Docker compose
                                      ```
 
 ---
-
-
-**estimated infrastructure monthly cost* with 2 student PCs* 340 / 730 hours * 5 hours = **2,30 $ per Workshop**
-
+**SLACK: #dach-how_aka-csw** with all pinned information and credentials
 
 **Public DNS access:**
 - Publisher SSH: publisher."ENV".sselab.eu
