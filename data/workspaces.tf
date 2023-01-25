@@ -119,6 +119,23 @@ locals {
       igw_name                      = "igw-brice"
       namespace                     = "br"
     }
+	kilian = {
+      name                    = "kilian"
+      vpc_cidr                = ["10.7.0.0/16"]
+      subnet1_cidr            = ["10.7.1.0/24"]
+      subnet2_cidr            = ["10.7.2.0/24"]
+      vpc_name                = "vpc-kilian-csw"
+      subnet1_name            = "Subnet1-kilian"
+      subnet2_name            = "Subnet2-kilian"
+      publisher_security_group_name = "publisher-SG-kilian"
+      webserver_security_group_name = "webserver-SG-kilian"
+      student_security_group_name   = "student-SG-kilian"
+      guacamole_security_group_name = "guacamole-SG-kilian"
+      master_security_group_name    = "master-SG-kilian"
+      route_table1_name             = "route-table-kilian"
+      igw_name                      = "igw-kilian"
+      namespace                     = "kz"
+    }
   }
   workspace = "${local.env[terraform.workspace]}"
 }
