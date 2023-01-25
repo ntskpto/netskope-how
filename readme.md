@@ -30,14 +30,7 @@ git clone https://github.com/PhilRumi/netskope-csw
 docker-compose run cloudworkshop make apply
 ```
 
-**to start the environment with a new publisher and token connect**<br>
-
-```
-docker-compose run cloudworkshop make apply_ubuntu
-```
-
 **to destroy the environment**<br>
-
 ```
 docker-compose run cloudworkshop make destroy
 ```
