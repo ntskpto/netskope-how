@@ -16,17 +16,17 @@ terraform.state will be saved on remote S3 buckets with versioning, encryption e
 
 **3) Clone the git repository:**
          ```
-         git clone https://github.com/PhilRumi/netskope-csw
+         git clone https://github.com/marcus876/netskope-how
          ```
 
 **4a) To start the environment:**
                            ```
-                           docker-compose run cloudworkshop make apply
+                           docker-compose run myhow make apply
                            ```
 
 **4b)to destroy the environment:**
                                      ```
-                                     docker-compose run cloudworkshop make destroy
+                                     docker-compose run myhow make destroy
                                      ```
 
 ---
@@ -40,7 +40,7 @@ terraform.state will be saved on remote S3 buckets with versioning, encryption e
 
 **Environments can be extended by:** 
 - 1st modifying the "workspaces.tf" file by copying the relevant data block using a new name
-- 2nd creating the new workspace by unsing "docker-compose run cloudworkshop terraform workspace new <name>"
+- 2nd creating the new workspace by unsing "docker-compose run myhow terraform workspace new <name>"
 
 **Environment**: <br>
 ![LAB ENVIRONMENT](Images/lab.jpg)
