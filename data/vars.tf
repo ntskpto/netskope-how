@@ -42,9 +42,10 @@ variable "key_name" {
     type = string
     default = "CSW-key-pair-01"
 }
+
 variable "student_instance_ami" {
     type = string
-    default = "ami-037a09e8088407aca"
+    default = "ami-021d073d41d26486f"
 }
 variable "student_instance_type" {
     type = string
@@ -54,30 +55,16 @@ variable "student_instance_count" {
     type = number 
     description = "Number of studentPCs?"
 }
+
 variable "publisher_instance_ami" {
     type = string
-    default = "ami-0756b97291156548b"
+    default = "ami-0ff61f56548466d3f"
 }
 variable "publisher_instance_type" {
     type = string
     default = "t3.small"
 }
-#variable "publisher_instance_ami" {
-#    type = string
-#    default = "ami-0dc0f92b55605df4d"
-#}
-#variable "publisher_instance_type" {
-#    type = string
-#    default = "t3.small"
-#}
-#variable "ubuntu_publisher_instance_ami" {
-#    type = string
-#    default = "ami-0019de00d22dbb1e4"
-#}
-#variable "ubuntu_publisher_instance_type" {
-#    type = string
-#    default = "t3.small"
-#}
+
 variable "webserver_instance_ami" {
     type = string
     default = "ami-071d25f19a56da4df"
@@ -86,6 +73,7 @@ variable "webserver_instance_type" {
     type = string
     default = "t3.small"
 }
+
 variable "guacamole_instance_ami" {
     type = string
     default = "ami-04d29be4d6f442172"
@@ -94,6 +82,7 @@ variable "guacamole_instance_type" {
     type = string
     default = "t3.large"
 }
+
 variable "master_instance_ami" {
     type = string
     default = "ami-0c1e6dc9f1cc6950c"
@@ -102,6 +91,7 @@ variable "master_instance_type" {
     type = string
     default = "t3.large"
 }
+
 ############################################################
 #             route53.tf VARIABLES 
 ############################################################
@@ -140,9 +130,6 @@ variable "token" {
   description = "Enter the new Publisher token"
   type        = string
 }
-
-
-
 
 # variable condition
 # value = "${var.token != "" ? var.name : var.name2}"
