@@ -136,6 +136,40 @@ locals {
       igw_name                      = "igw-kilian"
       namespace                     = "kz"
     }
+	sse01 = {
+      name                    = "sse01"
+      vpc_cidr                = ["10.8.0.0/16"]
+      subnet1_cidr            = ["10.8.1.0/24"]
+      subnet2_cidr            = ["10.8.2.0/24"]
+      vpc_name                = "vpc-sse01-csw"
+      subnet1_name            = "Subnet1-sse01"
+      subnet2_name            = "Subnet2-sse01"
+      publisher_security_group_name = "publisher-SG-sse01"
+      webserver_security_group_name = "webserver-SG-sse01"
+      student_security_group_name   = "student-SG-sse01"
+      guacamole_security_group_name = "guacamole-SG-sse01"
+      master_security_group_name    = "master-SG-sse01"
+      route_table1_name             = "route-table-sse01"
+      igw_name                      = "igw-sse01"
+      namespace                     = "s1"
+    }
+	sse02 = {
+      name                    = "sse02"
+      vpc_cidr                = ["10.9.0.0/16"]
+      subnet1_cidr            = ["10.9.1.0/24"]
+      subnet2_cidr            = ["10.9.2.0/24"]
+      vpc_name                = "vpc-sse02-csw"
+      subnet1_name            = "Subnet1-sse02"
+      subnet2_name            = "Subnet2-sse02"
+      publisher_security_group_name = "publisher-SG-sse02"
+      webserver_security_group_name = "webserver-SG-sse02"
+      student_security_group_name   = "student-SG-sse02"
+      guacamole_security_group_name = "guacamole-SG-sse02"
+      master_security_group_name    = "master-SG-sse02"
+      route_table1_name             = "route-table-sse02"
+      igw_name                      = "igw-sse02"
+      namespace                     = "s2"
+    }
   }
   workspace = "${local.env[terraform.workspace]}"
 }
