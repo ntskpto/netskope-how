@@ -67,7 +67,7 @@ variable "publisher_instance_type" {
 
 variable "webserver_instance_ami" {
     type = string
-    default = "ami-071d25f19a56da4df"
+    default = "ami-0a7d9ad8aea474ed7"
 }
 variable "webserver_instance_type" {
     type = string
