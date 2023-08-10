@@ -16,7 +16,7 @@ terraform.state will be saved on remote S3 buckets with versioning, encryption e
 
 **3) Clone the git repository:**
          ```
-         git clone https://github.com/marcus876/netskope-how
+         git clone https://github.com/ntskpto/netskope-how
          ```
 
 **4a) To start the environment:**
