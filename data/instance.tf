@@ -16,7 +16,7 @@ resource "aws_instance" "student_instance" {
 resource "aws_eip" "student_eip" {
   count = var.student_instance_count
   instance = aws_instance.student_instance[count.index].id
-  vpc      = true
+  domain = "vpc"
 }
 
 ############################################################
@@ -38,7 +38,7 @@ resource "aws_instance" "publisher_instance" {
 resource "aws_eip" "publisher_eip" {
   count = var.csw_publisher ? 1 : 0
   instance = aws_instance.publisher_instance[0].id
-  vpc      = true
+  domain = "vpc"
 }
 
 ############################################################
@@ -91,7 +91,7 @@ resource "aws_instance" "guacamole_instance" {
 
  resource "aws_eip" "guacamole_instance_eip" {
   instance = aws_instance.guacamole_instance.id
-  vpc      = true
+  domain = "vpc"
 }
 
 ############################################################
@@ -111,7 +111,7 @@ resource "aws_instance" "master_instance" {
 
 resource "aws_eip" "master_instance_eip" {
   instance = aws_instance.master_instance.id
-  vpc      = true
+  domain = "vpc"
 }
 
 
