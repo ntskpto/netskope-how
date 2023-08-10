@@ -6,7 +6,7 @@ variable "aws_secret_key" {}
 variable "aws_region" {}
 
 ############################################################
-#             STUDENT USER PREFIX                          #
+#             STUDENT USER PREFIX                         ##
 ############################################################
 
 variable "student_prefix" {
