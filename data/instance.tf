@@ -60,6 +60,13 @@ resource "aws_instance" "webserver_instance" {
 ############################################################
 ### Guacamole Instance
 ############################################################
+data "template_file" "user_data" {
+  template = file("./guacamole-cloud-init.yaml")
+  vars = {
+    workspace = "${local.workspace["namespace"]}"
+   }
+}
+
 resource "aws_instance" "guacamole_instance" {
     ami = var.guacamole_instance_ami
     instance_type = var.guacamole_instance_type
@@ -69,27 +76,11 @@ resource "aws_instance" "guacamole_instance" {
     tags = {
       Name = "${local.workspace["name"]}-CSW_Guacamole"
     } 
+
+    user_data = data.template_file.user_data.rendered
 }
-    resource "null_resource" "configure-guacamole" {
-   connection {
-   type = "ssh"
-   host = aws_eip.guacamole_instance_eip.public_ip
-   user = "centos"
-   private_key = file("./labkey.pem")
- }
 
- provisioner "remote-exec" {
-   inline = [
-     "sudo echo \"export env=${local.workspace["namespace"]}\" >> ~/.bashrc",
-     "source ~/.bashrc",
-     "cd /home/centos/docker_umgebung/guacamole_version1/",
-     "docker-compose up -d",
-     "exit"
-     ]
-   }  
- }
-
- resource "aws_eip" "guacamole_instance_eip" {
+resource "aws_eip" "guacamole_instance_eip" {
   instance = aws_instance.guacamole_instance.id
   domain = "vpc"
 }
