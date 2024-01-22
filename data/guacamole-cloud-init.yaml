@@ -1,0 +1,9 @@
+#cloud-config
+#
+# Start Docker Environment for Guacamole
+#
+runcmd:
+  - echo "export env=${workspace}" >> ~/.bashrc
+  - source ~/.bashrc
+  - cd /home/centos/docker_umgebung/guacamole_version1/
+  - docker-compose up -d
