@@ -78,6 +78,10 @@ resource "aws_instance" "guacamole_instance" {
     } 
 
     user_data = data.template_file.user_data.rendered
+
+    root_block_device {
+      delete_on_termination = "true"
+    }
 }
 
 resource "aws_eip" "guacamole_instance_eip" {
