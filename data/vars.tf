@@ -45,7 +45,7 @@ variable "key_name" {
 
 variable "student_instance_ami" {
     type = string
-    default = "ami-0b949f8dcd5467e5f"
+    default = "ami-01962c25eebe635f7"
 }
 variable "student_instance_type" {
     type = string
@@ -58,7 +58,7 @@ variable "student_instance_count" {
 
 variable "publisher_instance_ami" {
     type = string
-    default = "ami-0ae660e590a493aa9"
+    default = "ami-06bde81c44a1c6f71"
 }
 variable "publisher_instance_type" {
     type = string
