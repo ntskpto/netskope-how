@@ -58,7 +58,7 @@ variable "student_instance_count" {
 
 variable "publisher_instance_ami" {
     type = string
-    default = "ami-06bde81c44a1c6f71"
+    default = "ami-08e2a17c8e2330cd6"
 }
 variable "publisher_instance_type" {
     type = string
