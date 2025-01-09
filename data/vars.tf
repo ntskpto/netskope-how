@@ -45,7 +45,7 @@ variable "key_name" {
 
 variable "student_instance_ami" {
     type = string
-    default = "ami-0201b4983d1796cf4"
+    default = "ami-0546311a07250f160"
 }
 variable "student_instance_type" {
     type = string
