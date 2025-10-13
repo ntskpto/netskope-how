@@ -51,22 +51,22 @@ locals {
       igw_name                      = "igw-georg"
       namespace                     = "gh"
     }
-    andre = {
-      name                    = "andre"
+    sse03 = {
+      name                    = "sse03"
       vpc_cidr                = ["10.3.0.0/16"]
       subnet1_cidr            = ["10.3.1.0/24"]
       subnet2_cidr            = ["10.3.2.0/24"]
-      vpc_name                = "vpc-andre-csw"
-      subnet1_name            = "Subnet1-andre"
-      subnet2_name            = "Subnet2-andre"
-      publisher_security_group_name = "publisher-SG-andre"
-      webserver_security_group_name = "webserver-SG-andre"
-      student_security_group_name   = "student-SG-andre"
-      guacamole_security_group_name = "guacamole-SG-andre"
-      master_security_group_name    = "master-SG-andre"
-      route_table1_name             = "route-table-andre"
-      igw_name                      = "igw-andre"
-      namespace                     = "as"
+      vpc_name                = "vpc-sse03-csw"
+      subnet1_name            = "Subnet1-sse03"
+      subnet2_name            = "Subnet2-sse03"
+      publisher_security_group_name = "publisher-SG-sse03"
+      webserver_security_group_name = "webserver-SG-sse03"
+      student_security_group_name   = "student-SG-sse03"
+      guacamole_security_group_name = "guacamole-SG-sse03"
+      master_security_group_name    = "master-SG-sse03"
+      route_table1_name             = "route-table-sse03"
+      igw_name                      = "igw-sse03"
+      namespace                     = "s3"
     }
     eugen = {
       name                    = "eugen"
