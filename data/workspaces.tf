@@ -1,6 +1,6 @@
 locals {
   env = {
-    marcus = {
+    cd01 = {
       name                    = "cd01"
       vpc_cidr                = ["10.0.0.0/16"]
       subnet1_cidr            = ["10.0.1.0/24"]
@@ -17,7 +17,7 @@ locals {
       igw_name                      = "igw-cd01"
       namespace                     = "c1"
     }
-    seb = {
+    cd02 = {
       name                    = "cd02"
       vpc_cidr                = ["10.1.0.0/16"]
       subnet1_cidr            = ["10.1.1.0/24"]
