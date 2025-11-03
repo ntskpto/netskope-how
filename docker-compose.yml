@@ -2,7 +2,7 @@
 
 services:
   myhow:
-    image: mj21/terraform-how:alpine
+    image: ntskceur/terraform-how:alpine
     volumes:
       - ./data/:/usr/local/bin/data/
     environment:
