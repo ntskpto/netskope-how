@@ -4,7 +4,7 @@ This terraform module creates Netskope Hands On Lab Environment with predefined 
 
 terraform works with so called workspaces, so you can switch into individual "working environments". One can create multiple lab environments in different workingspaces at the same time.
 
-Every workspace creates a DNS subzone of sselab.eu in the initials workspace
+Every workspace creates a DNS subzone of sselab.eu in the initials of the workspace
 
 terraform.state will be saved on remote S3 buckets with versioning, encryption enabled in DynamoDB
 
