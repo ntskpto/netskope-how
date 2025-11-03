@@ -7,11 +7,11 @@ resource "aws_security_group" "student_security_group" {
       cidr_blocks      = ["0.0.0.0/0"]
     }
     ingress {
-      description      = "Allow RDP from Everywhere"
+      description      = "Allow RDP from internal"
       from_port        = 3389
       to_port          = 3389
       protocol         = "tcp"
-      cidr_blocks      = ["0.0.0.0/0"]
+      cidr_blocks      = ["172.0.0.0/12", "10.0.0.0/8", "192.168.0.0/16"]
     }
         ingress {
       description      = "Allow ANY from internal"
