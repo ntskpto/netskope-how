@@ -93,21 +93,21 @@ resource "aws_eip" "guacamole_instance_eip" {
 ### Master Instance
 ############################################################
 
-resource "aws_instance" "master_instance" {
-    ami = var.master_instance_ami
-    instance_type = var.master_instance_type
-    subnet_id = "${aws_subnet.subnet1.id}"
-    key_name = var.key_name
-    vpc_security_group_ids = ["${aws_security_group.master_security_group.id}"]
-    tags = {
-      Name = "${local.workspace["name"]}-CSW_Master"
-    }
-}
+# resource "aws_instance" "master_instance" {
+#     ami = var.master_instance_ami
+#     instance_type = var.master_instance_type
+#     subnet_id = "${aws_subnet.subnet1.id}"
+#     key_name = var.key_name
+#    vpc_security_group_ids = ["${aws_security_group.master_security_group.id}"]
+#   tags = {
+#      Name = "${local.workspace["name"]}-CSW_Master"
+#    }
+# }
 
-resource "aws_eip" "master_instance_eip" {
-  instance = aws_instance.master_instance.id
-  domain = "vpc"
-}
+# resource "aws_eip" "master_instance_eip" {
+#   instance = aws_instance.master_instance.id
+#   domain = "vpc"
+# }
 
 
 
