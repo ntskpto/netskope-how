@@ -64,20 +64,20 @@ resource "aws_route53_record" "guacamole_private_record" {
     ttl     = "30"
     records = [aws_instance.guacamole_instance.private_ip]
 }
-resource "aws_route53_record" "master_public_record" {
-    zone_id = aws_route53_zone.aws_sub_zone.zone_id
-    name    = "master"
-    type    = "A"
-    ttl     = "30"
-    records = [aws_eip.master_instance_eip.public_ip]
-}
-resource "aws_route53_record" "master_private_record" {
-    zone_id = aws_route53_zone.private_zone.zone_id
-    name    = "master"
-    type    = "A"
-    ttl     = "30"
-    records = [aws_instance.master_instance.private_ip]
-}
+# resource "aws_route53_record" "master_public_record" {
+#     zone_id = aws_route53_zone.aws_sub_zone.zone_id
+#     name    = "master"
+#     type    = "A"
+#     ttl     = "30"
+#     records = [aws_eip.master_instance_eip.public_ip]
+# }
+# resource "aws_route53_record" "master_private_record" {
+#     zone_id = aws_route53_zone.private_zone.zone_id
+#     name    = "master"
+#     type    = "A"
+#    ttl     = "30"
+#    records = [aws_instance.master_instance.private_ip]
+# }
 
 # create AWS SUBZONE 
 
