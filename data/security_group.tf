@@ -116,34 +116,34 @@ ingress {
     }
 }
 
-resource "aws_security_group" "master_security_group" {
-    vpc_id = aws_vpc.vpc.id
-    egress {
-        from_port = 0
-        to_port = 0
-        protocol = -1 
-        cidr_blocks      = ["0.0.0.0/0"]
-    }
+# resource "aws_security_group" "master_security_group" {
+#    vpc_id = aws_vpc.vpc.id
+#    egress {
+#        from_port = 0
+#        to_port = 0
+#        protocol = -1 
+#        cidr_blocks      = ["0.0.0.0/0"]
+#    }
 
-ingress {
-    description      = "Allow RDP from everywhere"
-    from_port        = 3389
-    to_port          = 3389
-    protocol         = "tcp"
-    cidr_blocks      = ["172.0.0.0/12", "10.0.0.0/8", "192.168.0.0/16"] 
-  }
-        ingress {
-      description      = "Allow ANY from internal"
-      from_port        = 0
-      to_port          = 65535
-      protocol         = "tcp"
-      cidr_blocks      = ["10.0.0.0/8"]
-    }
-  
-
-    tags = {
-        Name = "${local.workspace["master_security_group_name"]}"
-    }
-}
+# ingress {
+#    description      = "Allow RDP from everywhere"
+#    from_port        = 3389
+#    to_port          = 3389
+#    protocol         = "tcp"
+#    cidr_blocks      = ["172.0.0.0/12", "10.0.0.0/8", "192.168.0.0/16"] 
+# }
+#         ingress {
+#      description      = "Allow ANY from internal"
+#      from_port        = 0
+#      to_port          = 65535
+#      protocol         = "tcp"
+#      cidr_blocks      = ["10.0.0.0/8"]
+#    }
+#  
+#
+#    tags = {
+#        Name = "${local.workspace["master_security_group_name"]}"
+#    }
+# }
 
 
