@@ -70,7 +70,7 @@ resource "aws_route53_record" "guacamole_private_record" {
 #     type    = "A"
 #     ttl     = "30"
 #     records = [aws_eip.master_instance_eip.public_ip]
-# }
+#  }
 # resource "aws_route53_record" "master_private_record" {
 #     zone_id = aws_route53_zone.private_zone.zone_id
 #     name    = "master"
