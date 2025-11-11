@@ -58,7 +58,7 @@ variable "student_instance_count" {
 
 variable "publisher_instance_ami" {
     type = string
-    default = "ami-08e2a17c8e2330cd6"
+    default = "ami-0815441084fd083df"
 }
 variable "publisher_instance_type" {
     type = string
@@ -83,14 +83,14 @@ variable "guacamole_instance_type" {
     default = "t3.large"
 }
 
-variable "master_instance_ami" {
-    type = string
-    default = "ami-0c1e6dc9f1cc6950c"
-}
-variable "master_instance_type" {
-    type = string
-    default = "t3.large"
-}
+# variable "master_instance_ami" {
+#    type = string
+#    default = "ami-0c1e6dc9f1cc6950c"
+# }
+# variable "master_instance_type" {
+#     type = string
+#     default = "t3.large"
+# }
 
 ############################################################
 #             route53.tf VARIABLES 
