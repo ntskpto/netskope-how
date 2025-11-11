@@ -76,7 +76,7 @@ variable "webserver_instance_type" {
 
 variable "guacamole_instance_ami" {
     type = string
-    default = "ami-04d29be4d6f442172"
+    default = "ami-0fd4e72bfc4ed78b7"
 }
 variable "guacamole_instance_type" {
     type = string
